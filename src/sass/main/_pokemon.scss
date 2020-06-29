@@ -8,7 +8,7 @@
     grid-template-columns: repeat(6, 1fr);
   }
 
-  &--heading { 
+  &--heading {
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -53,11 +53,6 @@
     &--container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 0.75rem;
-    }
-
-    &--heading {
-      font-size: 1.5rem;
     }
   }
 }
@@ -65,17 +60,12 @@
 /* tablet-responsive */
 @include tablet-responsive {
   .pokemons {
-    width: 95%;
+    width: 100%;
     margin: 2rem auto;
 
     &--container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      column-gap: 0.5rem;
-    }
-
-    &--heading {
-      font-size: 1.5rem;
     }
   }
 }
