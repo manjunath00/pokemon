@@ -1,0 +1,36 @@
+.modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.64);
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 10% 0;
+}
+
+.modal-body {
+  background-color: #f4f5f7;
+  margin: auto;
+  width: 15%;
+  margin-top: 10%;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+@include mobile-responsive {
+  .modal-body {
+    margin: 0 auto;
+    margin-top: 35%;
+    width: 275px;
+  }
+}
+
+/* tablet-responsive */
+@include tablet-responsive {
+  .modal-body {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 275px;
+  }
+}
