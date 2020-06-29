@@ -1,0 +1,21 @@
+/* mixins for various desktop sizes */
+
+// mobile-start
+$start-mobile: "319px";
+$end-mobile: "480px";
+
+// tablet width
+$start-tablet: "481px";
+$end-tablet: "1024px";
+
+@mixin tablet-responsive {
+  @media only screen and (min-device-width: $start-tablet) and (max-device-width: $end-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile-responsive {
+  @media only screen and (min-device-width: $start-mobile) and (max-device-width: $end-mobile) {
+    @content;
+  }
+}
