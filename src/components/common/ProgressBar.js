@@ -1,4 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+const propTypes = {
+  type: PropTypes.string.isRequired,
+  score: PropTypes.number.isRequired,
+};
 
 function ProgressBar({ type, score }) {
   const color = type === "Defense" ? "#1199ff" : "#ffa500";
@@ -15,16 +21,18 @@ function ProgressBar({ type, score }) {
   };
 
   return (
-    <div>
-      <div className='progressbar-title flex'>
+    <div className='progressbar'>
+      <div className='flex'>
         <p>{type}</p>
-        <p className='percent'>{score}</p>
+        <p>{score}</p>
       </div>
-      <div className='bar-container'>
+      <div className='progressbar__container'>
         <span style={style}></span>
       </div>
     </div>
   );
 }
+
+ProgressBar.propTypes = propTypes;
 
 export default ProgressBar;
