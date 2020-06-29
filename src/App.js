@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='container'>
       <Header />
-      <Route path='/' component={Pokemon} />
+      <Pokemon />
       <Route path='/pokemon/:pokemonId' component={SelectedPokomon} />
     </div>
   );
