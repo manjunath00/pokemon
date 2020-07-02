@@ -1,4 +1,5 @@
-import Button from "./Button";
-import ProgressBar from "./ProgressBar";
+import Button from "./Button/Button";
+import ProgressBar from "./ProgressBar/ProgressBar";
+import Modal from "./Modal/Modal";
 
-export { Button, ProgressBar };
+export { Button, ProgressBar, Modal };
