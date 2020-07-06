@@ -31,20 +31,21 @@ app.use(cors());
 //routes
 app.use("/api", pokemonRoutes);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+// if (process.env.NODE_ENV === "production") {
+app.use(express.static("client/build"));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html")); // relative path
-  });
-}
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html")); // relative path
+});
+// }
 
-app.get("/", (req, res) => {
+/* app.get("/", (req, res) => {
   res.send(`<h1>Hello There </h1>`);
 });
+ */
 
 //port
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3003;
 
 //Starting the server
 app.listen(PORT, () =>
