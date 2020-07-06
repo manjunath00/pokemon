@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+input {
+  border: none;
+  font-size: inherit;
+  font-weight: bold;
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+  padding: 0.5rem;
+  overflow: auto;
+  font-size: 1.5rem;
+}
