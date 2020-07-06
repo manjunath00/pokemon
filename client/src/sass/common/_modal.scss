@@ -1,0 +1,51 @@
+.modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.64);
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 10% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  background-color: #f4f5f7;
+  opacity: 0;
+  border-radius: 4px;
+  transition: ease-in-out 3s;
+  animation: sketchOut 0.25s ease-in-out forwards;
+}
+
+@keyframes sketchOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include mobile-responsive {
+  .modal-body {
+    margin: 0 auto;
+    margin-top: 35%;
+    width: 275px;
+  }
+}
+
+/* tablet-responsive */
+@include tablet-responsive {
+  .modal {
+    display: block;
+    margin: 5rem 0;
+  }
+
+  .modal-body {
+    margin: 0 auto; 
+    width: 50%;
+  }
+}

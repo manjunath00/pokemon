@@ -1,0 +1,35 @@
+.pagination {
+  position: relative;
+  top: 3rem;
+  width: fit-content;
+  margin: 0 auto;
+
+  & > button {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    width: 40px;
+    margin: 1rem;
+    background-color: #555;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+    &:active,
+    &:visited {
+      color: none;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: dodgerblue;
+      opacity: 0.8;
+      color: #fff;
+    }
+  }
+  .active-page {
+    background-color: dodgerblue;
+    color: #fff;
+  }
+}

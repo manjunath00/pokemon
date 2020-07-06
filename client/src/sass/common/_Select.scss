@@ -1,0 +1,25 @@
+.grid {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  &--heading {
+    font-weight: bold;
+    display: block;
+    margin: 0.25rem 0;
+  }
+
+  &--bar {
+    @extend .grid;
+
+    &__input {
+      select {
+        padding: 0.25rem 0;
+        margin-right: 0.25rem;
+        display: block;
+        font-weight: bold;
+      }
+    }
+  }
+}
