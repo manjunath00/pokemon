@@ -1,0 +1,77 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.25rem;
+  border: none;
+  background-color: #fff;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    transform: translateY(-5%);
+    transition: all 0.3s;
+    box-shadow: 3px 3px 5px 5px grey;
+    border-radius: 5px;
+    z-index: 100;
+  }
+}
+
+.p-0.5 {
+  padding: 0.5rem 0;
+}
+
+/* buttons */
+
+.large {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* submit button */
+
+.submit {
+  @extend .large;
+  background-color: dodgerblue;
+  color: #fff;
+}
+/* cancel button */
+
+.cancel {
+  @extend .large;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+}
+
+/* new button */
+
+.new {
+  @extend .large; 
+  padding: 0.25rem 0.5rem;
+  color: #6c757d;
+  border: 1px solid #000;
+  font-weight: bold;
+}
+
+/* border */
+.border-1 {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 0.25rem;
+  border-radius: 3px;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.9);
+  }
+}
