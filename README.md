@@ -12,7 +12,7 @@ npm i && npm start
 ```
 
 ## Link
-Try it out.Link [Here](https://reactpokemon3.netlify.app/)
+Try it out.Link [Here](https://pokemon-mern.herokuapp.com/)
  
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
