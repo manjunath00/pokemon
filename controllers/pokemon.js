@@ -14,7 +14,6 @@ exports.createANewPokemon = (req, res) => {
         message: err.message,
       });
     }
-    console.log(err);
     return res.json(pokemon);
   });
 };
@@ -39,7 +38,6 @@ exports.getAllPokemons = (req, res) => {
   let placeholder = {};
   if (req.query.search) {
     const searchTerm = req.query.search;
-    console.log(searchTerm);
     const searchKey = new RegExp("^" + searchTerm, "i");
     placeholder = { pokemonName: searchKey };
   }
@@ -54,7 +52,6 @@ exports.getAllPokemons = (req, res) => {
           message: err.message,
         });
       }
-      console.log(pokemons);
       const json = {
         data: pokemons,
         meta: { totalItems: count, pageNumber: pageNum },
@@ -86,3 +83,17 @@ exports.updateAPokemon = (req, res) => {
     }
   );
 };
+
+exports.deleteAPokemon = (req, res) => {
+  const pokemon = req.pokemon;
+
+  pokemon.remove((err, pokemon) => {
+    if(err) {
+      return res.status(400).json({ error : "Unable to delete a pokemon"})
+    }
+
+    return res.json({
+      message: `${pokemon.pokemonName} successfull deleted`,
+    })
+  })
+}
