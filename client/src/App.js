@@ -84,6 +84,11 @@ function App() {
     setMeta(pageMeta);
   };
 
+  const onPageReload = () => {
+    setPage(0);
+    setReload(!reload);
+  }
+
   const notify = () => toast(anyMessage);
   return (
     <div className='container'>
@@ -93,7 +98,7 @@ function App() {
         onSearchSubmitFunc={searchSubmitPokemon}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
-        onReload={setReload}
+        onReload={onPageReload}
         reload={reload}
       />
       <ToastContainer />
