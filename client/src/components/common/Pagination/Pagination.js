@@ -16,6 +16,10 @@ function Pagination({ meta, changePage }) {
   if (page < last - 1) pages.push(last - 1);
   if (page < last) pages.push(last);
 
+  if (page <= 3) {
+    pages.push(1)
+  }
+
   function pageNums(pages) {
     return pages.map((item) => {
       let className = "";
