@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const endPoint = process.env.backend || '';
+const endPoint = process.env.backend || 'localhost:3003';
 
 const getAllPokemons = (pageNumber = 1, limit = 20, searchTerm = "") => {
   let endPoint = ""; 
